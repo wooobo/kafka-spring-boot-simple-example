@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 public class EventsConsumerManualOffset implements AcknowledgingConsumerAwareMessageListener<Integer, String> {
 
     @Override
-    @KafkaListener(topics = {"bflow-event-topic"})
+    @KafkaListener(topics = {"test2-event-topic"})
     public void onMessage(ConsumerRecord<Integer, String> consumerRecord, Acknowledgment acknowledgment, Consumer<?, ?> consumer) {
         log.info("ConsumerRecord : {} ", consumerRecord);
         acknowledgment.acknowledge();
